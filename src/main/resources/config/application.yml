@@ -106,6 +106,14 @@ spring:
     exclude: org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration
   application:
     name: micro2
+  cloud:
+    stream:
+      bindings:
+        messageChannel:
+          destination: greetings
+          content-type: application/json
+        subscribableChannel:
+          destination: greetings
   jmx:
     enabled: false
   data:
